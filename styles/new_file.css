@@ -1,0 +1,138 @@
+/* 
+  类属性覆盖元素属性，相同类属性靠后的覆盖靠前的；
+  id属性覆盖类属性，
+  内联样式覆盖id属性
+ */
+html {
+  background-color: #00539F;
+  /* 设置元素应使用的字体 ,当第一字体不可用时，用第二字体显示，*/
+  font-family: sans-serif,monospace;
+}
+body {
+  /* 页面宽度设置 */
+  width: 1200px;
+  /* 设置元素的上，下，左，右的值，auto代表对称 */
+  margin: 0 auto;
+  /* 设置元素的背景颜色 */
+  background-color: #FF9500;
+  /* 设置内边距：上，下，左，右 */
+  padding: 0 20px 20px 20px;
+  /* 设置边框：5像素 实线 黑色 */
+  border: 5px solid black;
+}
+h1 {
+  /* 外边距 */
+  margin: 0;
+  /* 内边距按照顺时针方向上，右，下，左；取值为像素或百分比 */
+  padding: 20px 0;
+  color: #00539F;
+  /* 文本阴影属性：水平偏移-右正左负；垂直偏移-下正上负；模糊半径；阴影的基色 */
+  text-shadow: 3px 3px 1px black;
+  /* 文本大小写:lowercase,uppercase, ```*/
+  text-transform: uppercase;
+  /* 字体粗细 */
+  font-weight: 200;
+
+}
+.blue-text{
+  color: blue;
+}
+p {
+  color: red;
+  /* 字体大小 */
+  font-size: large;
+  /* 调整不透明度，1是完全不透明，0.5是半透明 */
+  opacity: 0.7;
+  /* 行高 */
+  line-height: 3px;
+  /* 改变相对位置,当取值为绝对位置abosulte时，不会改变位置；当取值为fixed时，滑动窗口不改变相对于窗口的位置；当位置为相对位置relative时，可以改变相对于其他元素的距离，此处为距顶部5像素值 */
+  position: relative;
+  top: 5px;
+}
+/* 利用id属性进行样式设定 */
+#blue-text{
+  color: blue;
+}
+[type='checkbox']{
+  margin:0;
+}
+.text-center{
+  text-align: center;
+}
+.rgba{
+  /* a的属性值由0到1，1代表完全不透明 */
+  background-color: rgba(45,45,45,0.1);
+}
+/* 为边框添加阴影效果 */
+#boxshadow{
+  border: 5px solid black;
+  /* 参数包括：阴影的X轴偏移量、Y轴偏移量、模糊半径、扩散半径和颜色 */
+  box-shadow: box-shadow 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.linear-color{
+  /* 颜色渐变，第一个参数为方向，90度表示从左到右，45度表示从左下到右上，后面的值表示颜色 */
+  /* repeating-linear-gradient 与上一个不同在于重复指定的渐变模式，可用于创建条纹元素*/
+  background-color: linear-gradient(90deg,red,green,blue);
+}
+
+
+
+
+
+a:hover{
+  color:green;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  /* 控制元素的宽度 */
+  width: 1000px;
+}
+/* 利用类属性进行样式设定 */
+.smaller-image{
+  width:200px;
+}
+.thick-blue-border{
+  /* 为类添加蓝色4像素的边框 */
+  border-color:blue;
+  border-width: 4px;
+  border-style: solid;
+  /* 添加带边框半径的圆角，此值也可使用百分比，如50% */
+  border-radius: 4px;
+}
+
+div:first-of-type {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-right: 15px;
+  line-height: 32px;
+}
+
+input:checked {
+  border: 6px solid black;
+}
+
+button,
+legend {
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 0;
+  font-size: 14px;
+}
+
+button:hover,
+button:focus {
+  color: #999;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
