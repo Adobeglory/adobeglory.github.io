@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="styles/styles.css">
+	
+	<head>
+		<meta charset="utf-8" />
+		<title>Adobeglory HTML Example</title>
+	</head>
+	<body>
+		<h1>HTML学习</h1>
+		<img src="images/liuyifei.jpg" alt="刘亦菲">
+		
+		<p class="text-center">
+		准备工作：
+			文本编辑器，浏览器，搭建本地测试服务器。
+			head元素对用户不可见，包含例如面向搜索引擎的搜索关键字（keywords）、页面描述、CSS 样式表和字符编码声明等。
+			图片img元素中alt属性对应图片的描述内容，可用于图片加载不出来时的显示。
+			标题元素有六级标题，对应h1到h6。段落用p元素。
+		颜色调整：
+			通过rgb机制，或者hsl(h表示色调，s表示，l表示亮度)机制表示颜色
+		</p>
+		<div id="boxshadow">
+			<p class="RGBA"></p>
+				CSS样式展示：
+				<strong>文本加粗</strong>
+				<u>文本下划线</u>
+				<em>斜体展示</em>
+				<s>文本删除线</s>
+				文本背景通过rgba调整
+			</p>
+			<p class="linear-color">
+				颜色渐变
+				background属性还支持url导入，可用于添加背景图片
+				transform属性
+				改变元素的大小，可通过以下函数调整为2倍。transform:scale(2)
+				通过hover悬停属性，可以通过上面函数在悬停时缩放元素。
+				沿X轴倾斜元素skewX(),示例：transform:skewX(24deg)为沿X轴倾斜24度。
+				同理，skewY()为沿Y轴倾斜。
+				使用CSS创建图形：
+
+				CSS制作动画：
+				@keyframes通过定义关键帧，达到动画效果
+				修改填充模式：animation-fill-mode:forwards;
+				控制希望循环播放的次数，此处为无线播放animation-iteration-count:infinite;
+				渐变消失：opacity
+			</p>
+
+		</div>
+		<p>跳转到<a href="login.html">登录界面</a></p>
+		<p>跳转到<a href="jstest.html">JS学习</a></p>
+		<p>跳转到<a href="#radio">单选题</a></p>
+		<p>跳转到<a href="#checkbox">多选题</a></p>
+		<p>AAAAAAAA</p>
+		<form action="#">
+			<p>这是一个输入框还有提交按钮：</p>
+			<!-- required属性用于表示此处必须填写 -->
+			<input type="text" placeholder="未输入文本之前显示的信息">
+			<p>必填项：<input type="text" required></p>
+			<!--提交按钮，type类型为submit,用来完成提交-->
+			<button type="submit">提交</button>
+		</form>
+		<p id="blue-text">form元素包含交互控件，用于向web服务器提交信息；有action属性，是处理表单提交的url。</p>
+		<ul>
+			这是无序列表(UnOrdered List)
+			<li>列表元素li</li>
+			<li>列表元素</li>
+		</ul>
+		<ol>
+			这是有序列表(Ordered List)
+			<li>列表元素1</li>
+			<li>列表元素2</li>
+		</ol>
+		<p>
+			<a href="https://www.baidu.com" target="_blank">百度</a>
+			target作为锚标记属性，指定在哪里打开链接，此处是在新选项卡中打开:)
+		</p>
+		<p><a href="#">死链接</a>：使用#制作死链接</p>
+		<p>
+			<a href="#footer">跳转到底部</a>
+			这是利用id属性进行内部跳转
+		</p>
+		<ul>
+			CSS的选择器类型
+			<li>元素选择器	p</li>
+			<li>ID选择器	#my-id</li>
+			<li>类选择器	.myclass</li>
+			<li>属性选择器	img[src]</li>
+			<li>伪类选择器	a:hover</li>
+		</ul>
+		<h2 class="blue-text">运行简单的本地服务器</h2>
+		<p>准备工作：html文件</p>
+		<p>步骤：</p>
+		<ol>
+			<li>安装python,可通过在命令行窗口执行	python -V命令查看是否安装成功</li>
+			<li>使用cd 命令切换到html文件所在的目录</li>
+			<li>执行python -m http.server命令运行http服务器(默认端口为8000，若端口被占用，可通过python -m http.server 7000命令指定端口号7000，端口号可自定义修改)</li>
+			<li>在浏览器中输入localhost:8000访问本地网站(若端口号已自定义修改，此处也随之修改)，亲测可用</li>
+		</ol>
+		<p style="color: blue;">
+			点击此处图片跳转到百度：
+			<a href="https://www.baidu.com" target="_blank"><img class="smaller-image thick-blue-border" src="images/baidu.png" alt="百度图标"></a>
+		</p>
+		<!-- 添加水平线 -->
+		<hr>
+		<form action="">
+			<fieldset id="radio">
+				<legend>（单选题）请对网页评价：</legend>
+				<div>
+					<label for="good">
+						<input type="radio" name="good" id="good" value="good">good
+					</label>
+					<label for="vgood">
+						<input type="radio" name="good" id="vgood" value="very good" required disabled>very good
+					</label>
+					<label for="vvgood">
+						<input type="radio" name="good" id="vvgood" value="very very good" checked>very very good
+					</label>
+				</div>
+				<div>
+					<button type="submit">submit</button>
+				</div>
+			</fieldset>
+			<fieldset id="checkbox">
+				<legend>（多选题）请对作者评价：</legend>
+				<div>
+					<label for="good">
+						<input type="checkbox" name="good" id="good" value="good">good
+					</label>
+					<label for="vgood">
+						<input type="checkbox" name="good" id="vgood" value="very good" required disabled>very good
+					</label>
+					<label for="vvgood">
+						<input type="checkbox" name="good" id="vvgood" value="very very good" checked>very very good
+					</label>
+				</div>
+				<div>
+					<button type="submit">submit</button>
+				</div>
+			</fieldset>
+		</form>
+		<pre id="log"></pre>
+		<button>切换用户</button>
+	</body>
+	<footer id="footer">
+		这是最下面了，下面没有了!!!
+	</footer>
+
+	<script src="scripts/main.js" defer></script>
+</html>
